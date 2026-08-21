@@ -1,0 +1,242 @@
+:root {
+    --bg: #fff9f6;
+    --primary: #B22222;
+    /* elegant, warm bistro red */
+    --accent: #16A34A;
+    --dark: #0F1724;
+    --muted: #6B7280;
+    --radius: 12px;
+    --container: 1100px;
+    --shadow: 0 6px 18px rgba(15, 23, 36, 0.08);
+    font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--dark);
+    background: var(--bg);
+}
+
+* {
+    box-sizing: border-box
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px
+}
+
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+.site-header {
+    backdrop-filter: saturate(120%) blur(6px);
+    position: sticky;
+    top: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    border-bottom: 1px solid rgba(15, 23, 36, 0.04);
+    z-index: 20
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px
+}
+
+.logo-accent {
+    color: var(--primary);
+    margin-left: 6px;
+    font-family: 'Playfair Display', serif
+}
+
+.nav a {
+    margin-right: 18px;
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 600
+}
+
+.btn {
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    border: 0;
+    font-weight: 600
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--primary), #FF6B35);
+    color: white;
+    box-shadow: var(--shadow)
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(15, 23, 36, 0.06);
+    color: var(--dark)
+}
+
+.btn-outline {
+    background: transparent;
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 1px solid rgba(15, 23, 36, 0.06)
+}
+
+.hero {
+    padding: 48px 0
+}
+
+.hero-inner {
+    display: flex;
+    gap: 30px;
+    align-items: center
+}
+
+.hero-copy {
+    flex: 1
+}
+
+.hero-copy h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    line-height: 1.02;
+    margin: 0 0 10px
+}
+
+.lead {
+    color: var(--muted);
+    margin-bottom: 16px
+}
+
+.hero-ctas .btn {
+    margin-right: 12px
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 520px;
+    box-shadow: var(--shadow)
+}
+
+.section {
+    padding: 36px 0
+}
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 18px
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column
+}
+
+.card img {
+    height: 160px;
+    object-fit: cover
+}
+
+.card-body {
+    padding: 10px
+}
+
+.card-body h3 {
+    margin: 0 0 6px;
+    font-size: 18px
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.card-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px
+}
+
+.price {
+    font-weight: 700
+}
+
+.reserve-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.reserve-form input,
+.reserve-form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(15, 23, 36, 0.06);
+    width: 100%;
+    margin-bottom: 8px
+}
+
+.reserve-form .row {
+    display: flex;
+    gap: 10px
+}
+
+.reserve-form .row input,
+.reserve-form .row select {
+    flex: 1
+}
+
+.site-footer {
+    padding: 20px 0;
+    border-top: 1px solid rgba(15, 23, 36, 0.04);
+    margin-top: 30px
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 14px
+}
+
+/* Responsive */
+@media (max-width:900px) {
+    .hero-inner {
+        flex-direction: column-reverse;
+        align-items: flex-start
+    }
+
+    .cards {
+        grid-template-columns: repeat(1, 1fr)
+    }
+
+    .header-inner {
+        padding: 12px 0
+    }
+
+    .hero-copy h1 {
+        font-size: 28px
+    }
+}

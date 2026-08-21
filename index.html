@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Les délices de Joelle — Prototype</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">Les délices de <span class="logo-accent">Joelle</span></div>
+            <nav class="nav">
+                <a href="#menu">Menu</a>
+                <a href="#about">À propos</a>
+                <a class="btn btn-outline" href="#reserve">Réserver</a>
+                <button class="btn btn-primary" id="orderNow">Commander</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <h1>Saveurs audacieuses. Produits locaux. Moments inoubliables.</h1>
+                    <p class="lead">Plats contemporains préparés avec amour — commandez en ligne pour emporter ou
+                        réservez votre table.</p>
+                    <div class="hero-ctas">
+                        <a class="btn btn-primary" href="#menu">Commander</a>
+                        <a class="btn btn-ghost" href="#reserve">Réserver une table</a>
+                    </div>
+                </div>
+                <div class="hero-image" aria-hidden="true">
+                    <img src="https://images.unsplash.com/photo-1604908176820-4b2c6f1b7b3b?q=80&w=900&auto=format&fit=crop"
+                        alt="Plat appétissant">
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="container section">
+            <h2 class="section-title">Plats populaires</h2>
+            <div class="cards">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=800&auto=format&fit=crop"
+                        alt="Bowl BBQ" />
+                    <div class="card-body">
+                        <h3>Bowl BBQ fumé</h3>
+                        <p class="muted">Porc effiloché, maïs grillé, crème citronnée</p>
+                        <div class="card-foot">
+                            <div class="price">€12.50</div>
+                            <button class="btn btn-sm btn-primary">Ajouter</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1604908177601-1c6c3b70b2f6?q=80&w=800&auto=format&fit=crop"
+                        alt="Poulet rôti" />
+                    <div class="card-body">
+                        <h3>Poulet rôti aux herbes</h3>
+                        <p class="muted">Pommes de terre à l'ail, légumes de saison</p>
+                        <div class="card-foot">
+                            <div class="price">€16.00</div>
+                            <button class="btn btn-sm btn-primary">Ajouter</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop"
+                        alt="Mezze végétalien" />
+                    <div class="card-body">
+                        <h3>Assiette mezze vegan</h3>
+                        <p class="muted">Houmous, légumes grillés, za'atar</p>
+                        <div class="card-foot">
+                            <div class="price">€11.00</div>
+                            <button class="btn btn-sm btn-primary">Ajouter</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="reserve" class="container section light">
+            <div class="reserve-card">
+                <h3>Réservez votre table</h3>
+                <p class="muted">Les arrivées sans réservation sont possibles, mais mieux vaut réserver pour éviter
+                    l'attente.</p>
+                <form class="reserve-form"
+                    onsubmit="event.preventDefault(); alert('Demande de réservation envoyée — prototype');">
+                    <input type="text" placeholder="Votre nom" required>
+                    <input type="tel" placeholder="Téléphone ou email" required>
+                    <div class="row">
+                        <input type="datetime-local" required>
+                        <select required>
+                            <option value="">Nombre de personnes</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5+</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary">Demander la réservation</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>© Les délices de Joelle • Ouvert mar–dim 11:30–22:00</div>
+            <div class="muted">12 Rue du Goût, Paris • (06) 12 34 56 78</div>
+        </div>
+    </footer>
+</body>
+
+</html>
